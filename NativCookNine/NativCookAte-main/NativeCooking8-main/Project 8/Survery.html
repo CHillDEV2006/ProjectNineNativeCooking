@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Native Cooking - Survey</title>
+<link rel="stylesheet" href="mysstyles.css">
+<link rel="stylesheet" href="print.css" media="print">
+</head>
+<body onload="preloadImages()">
+<div id="container">
+    <header>
+        <img src="Images/Baner.png" width="900px">
+        <nav>
+            <ul>
+                <li><a href="Home.html">| Home |</a><a href="Tributes.html">| Tributes |</a><a href="AboutUs.html">| About Us |</a><a href="Survery.html">| Survey |</a><a href="Links.html">| Favorites |</a></li>
+            </ul>
+        </nav>
+    </header>
+    <ul>
+        <li><h1>Customer Survey!</h1></li>
+        <li><h1 class="smaller">This Survey Helps Us Better Understand Your Needs and Wants</h1></li>
+        
+    </ul>
+
+    <section>
+       <form target="_blank" name="CustomerSurvey" action="FormToEmail.php" method="POST">
+        <fieldset>
+            <legend>CUSTOMER INFORMATION</legend>
+            <ul>
+                <li>Name:<input type="text" class="text" name="name" id="name"></li>
+                <li>Gender:<input type="radio" class="Gender" name="Gender" id="Male">MALE &nbsp;<input type="radio" class="Gender" name="Gender" id="Female">FEMALE</li>
+                <li>Phone Number:<input type="text" class="text" name="phone" id="phone" length="11"></li>
+                <li>
+                    <ul>
+                        <li>Yes, I would like to recieve Text Notifications!<input type="radio" class="textNotif" name="Text" id="TextYes"></li>
+                        <li>No, I would not like to recieve Text Notifications<input type="radio" class="textNotif" name="Text" id="TextNo"></li>
+                    </ul>
+                </li>
+                <li>Email:<input type="text" class="text" name="email" id="email" ></li>
+                <li>
+                    <ul>
+                        <li>Yes, I would like to recieve a Weekly Newsletter!<input type="radio" class="emailNotif" name="Email" id="MailYes"></li>
+                        <li>No, I would not like to recieve Weekly Newsletter<input type="radio" class="emailNotif" name="Email" id="MailNo"></li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </fieldset>
+        <fieldset>
+            <legend>INTEREST SURVEY</legend>
+            <ul>
+                <li>
+                    Favorite Meat 
+                    
+                    <select>
+                        <option>CHOOSE ONE</option>
+                        <option>Beef/Steak</option>
+                        <option>Chicken</option>
+                        <option>Bacon/Ham/Pork</option>
+                        <option>Turkey</option>
+                        <option>Tofu (vegetarian)</option>
+                        <option>Other</option>
+                    </select>
+                </li>
+                <br>
+                <li>Which of the following tools are you familiar with?</li>
+                <li>
+                    <ul>
+                        <li>Pots, Frying Pans, and Skillets<input type="checkbox" class="Familiar" name="Pots" id="Pots"></li>
+                        <li>Serrated Knife or Chef's Knife<input type="checkbox" class="Familiar" name="Knife" id="Knife"></li>
+                        <li>Wooden, Slotted, and Serving Spoons<input type="checkbox" class="Familiar" name="Spoon" id="Spoon"></li>
+                        <li>Dutch Oven and Gas Camping Stove<input type="checkbox" class="Familiar" name="Dutch" id="Dutch"></li>
+                    </ul>
+                </li>
+                <li>
+                    Were You Satisfied with your Visit Today? Yes <input type="radio" class="Satisfied" name="Satisfied" id="Yes"> No <input type="radio" class="Satisfied" name="Satisfied" id="No">
+                </li>
+            </ul>
+            
+        </fieldset>
+        <input type="submit"><input type="reset">
+       </form><h1 class="smallest">*INFORMATION WILL BE SOLD*</h1>
+    </section>
+    <a href="" onMouseOver="document.getElementById('print').src='Images/Print2.png';" onMouseOut="document.getElementById('print').src='Images/Print.png';" onclick="window.print()">
+
+        <footer>
+            <img src="Images/Print.png" width="70" height="80" name="PrintButton" alt="PrintButton" style="border:none;" id="print"/>
+    
+        </footer>
+
+	</a>
+</div>
+</body>
+</html>

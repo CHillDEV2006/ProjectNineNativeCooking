@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Native Cooking - Home</title>
+<link rel="stylesheet" href="mysstyles.css">
+<link rel="stylesheet" href="print.css" media="print">
+
+<script language="JavaScript" type="text/javascript">
+
+	PrintButton1 = new Image
+	PrintButton2 = new Image
+	logo1 = new Image
+	logo2 = new Image
+if (document.images) {
+	PrintButton1.src = "images/print5.gif"
+	PrintButton2.src = "images/print6.gif"
+	logo1.src = "images/logo1.jpg"
+	logo2.src = "images/logo2.jpg"
+}
+
+
+		var imgArray = new Array(
+			'Chef2Lg.jpg',
+			'DutchOvenLg.jpg',
+			'RasberryCakeLg.jpg',
+			'JelloCakeLg.jpg'
+			
+
+		);
+
+
+		var titleArray = new Array(
+			'Chef',
+			'Dutch Oven',
+			'Raspberry Cake',
+			'Jello Cake'
+			
+		);
+			
+		var imgPath = "Images/Fullsize/";
+		
+		function swapImage(imgID) {
+
+			var theImage = document.getElementById('theImage');
+			var textDiv = document.getElementById('bottomText');
+
+			var newImg;
+			var textTitle;
+
+			newImg = imgArray[imgID];
+			theImage.src = imgPath + newImg;
+
+			textTitle=titleArray[imgID];
+
+      			textDiv.innerHTML = textTitle;
+		}
+			
+		function preloadImages() {		
+			for(var i = 0; i < imgArray.length; i++) {
+				var tmpImg = new Image;
+				tmpImg.src = imgPath + imgArray[i];
+			}
+		}
+		
+
+</script>
+</head>
+<body onload="preloadImages()">
+<div id="container">
+    <header>
+        <img src="Images/Baner.png" width="900px">
+        <nav>
+            <ul>
+                <li><a href="Home.html">| Home |</a><a href="Tributes.html">| Tributes |</a><a href="AboutUs.html">| About Us |</a><a href="Survery.html">| Survey |</a><a href="Links.html">| Favorites |</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <h1>Welcome to Native Cooking of Utah!</h1>
+            <p>If you love to cook like we do, you should enjoy looking around this site.
+            Take a look at our Recipes and take the opportunity to complete our
+            survey.</p>
+                <img src="Images/Thumbnails/Chef2Sm.jpg" alt="Couple Sailing" onmouseover="swapImage(0);" width="20%"/>
+		        <img src="Images/Thumbnails/DutchOvenSm.jpg" alt="Pig and Boy" onmouseover="swapImage(1);" width="20%"/>
+		        <img src="Images/Thumbnails/RasberryCakeSm.jpg" alt="Salad" onmouseover="swapImage(2);" width="20%"/>
+		        <img src="Images/Thumbnails/JelloCakeSm.jpg" alt="Stork" onmouseover="swapImage(3);" width="20%"/>
+                <img id="theImage" src="Images/FullSize/Chef2Lg.jpg" alt="CoupleSailing" width="50%"/>
+                <h3 id="bottomText">Chef</h3>
+        </article>
+		<h3>Expanded Repertoire</h3>
+        <p>My name is Daisy Daniels and I have enjoyed using the recipes I have found at your web site.  I thought I already knew how to cook like a Utahan, but I have been able to expand my repertoire after trying out some of your more unusual offerings.  I like how these recipes are inexpensive to prepare, and they serve lots of people.  The clean up usually is painless as well.  I loved your green jello recipe.  My family makes sure we never have leftovers when I fix this one. Thanks for everything,</p>
+        <p>Daisy Daniels</p>
+        <p>Eureka, Utah</p>
+		<a href="Tributes.html"><p>more>></p></a>
+    </section>
+    <a href="" onMouseOver="document.getElementById('print').src='Images/Print2.png';" onMouseOut="document.getElementById('print').src='Images/Print.png';" onclick="window.print()">
+
+        <footer>
+            <img src="Images/Print.png" width="70" height="80" name="PrintButton" alt="PrintButton" style="border:none;" id="print"/>
+    
+        </footer>
+
+	</a>
+</div>
+</body>
+</html>

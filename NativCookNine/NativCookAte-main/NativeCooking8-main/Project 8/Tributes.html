@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Native Cooking - Tributes</title>
+<link rel="stylesheet" href="mysstyles.css">
+<link rel="stylesheet" href="print.css" media="print">
+
+<script language="JavaScript" type="text/javascript">
+
+	PrintButton1 = new Image
+	PrintButton2 = new Image
+	logo1 = new Image
+	logo2 = new Image
+if (document.images) {
+	PrintButton1.src = "images/print5.gif"
+	PrintButton2.src = "images/print6.gif"
+	logo1.src = "images/logo1.jpg"
+	logo2.src = "images/logo2.jpg"
+}
+
+
+		var imgArray = new Array(
+			'Chef2Lg.jpg',
+			'DutchOvenLg.jpg',
+			'RasberryCakeLg.jpg',
+			'JelloCakeLg.jpg'
+			
+
+		);
+
+
+		var titleArray = new Array(
+			'Chef',
+			'Dutch Oven',
+			'Raspberry Cake',
+			'Jello Cake'
+			
+		);
+			
+		var imgPath = "Images/Fullsize/";
+		
+		function swapImage(imgID) {
+
+			var theImage = document.getElementById('theImage');
+			var textDiv = document.getElementById('bottomText');
+
+			var newImg;
+			var textTitle;
+
+			newImg = imgArray[imgID];
+			theImage.src = imgPath + newImg;
+
+			textTitle=titleArray[imgID];
+
+      			textDiv.innerHTML = textTitle;
+		}
+			
+		function preloadImages() {		
+			for(var i = 0; i < imgArray.length; i++) {
+				var tmpImg = new Image;
+				tmpImg.src = imgPath + imgArray[i];
+			}
+		}
+		
+
+</script>
+</head>
+<body onload="preloadImages()">
+	<header>
+	<img src="Images/Baner.png" width="900px">
+    <nav>
+        <ul>
+            <li><a href="Home.html">| Home |</a><a href="Tributes.html">| Tributes |</a><a href="AboutUs.html">| About Us |</a><a href="Survery.html">| Survey |</a><a href="Links.html">| Favorites |</a></li>
+        </ul>
+    </nav>
+	</header>
+        <h1>Native Cooking</h1>
+        <h2>Tributes</h2>
+        <hr>
+        <h3>Favorite Pass Time</h3>
+        <p>My favorite past time is cooking.  I especially like cooking for family and friends.  I was glad to find this web site about Native Cooking of Utah.  I like to make sure the items I choose to cook meet the needs of my target audience.  I have found the recipes in this collection to be wildly popular with my Utah neighbors and family members.  My family especially loves the raspberry cake recipe.  I am enclosing a photo of my version of the cake. Thanks for adding spice to my cooking,</p>
+        <p>Janet Waters</p>
+        <p>Salt Lake City, Utah</p>
+        <img src="Images/Thumbnails/RasberryCakeSm.jpg" width="250" height="166" alt="Raspberry Cake">
+        <hr>
+        <h3>Expanded Repertoire</h3>
+        <p>My name is Daisy Daniels and I have enjoyed using the recipes I have found at your web site.  I thought I already knew how to cook like a Utahan, but I have been able to expand my repertoire after trying out some of your more unusual offerings.  I like how these recipes are inexpensive to prepare, and they serve lots of people.  The clean up usually is painless as well.  I loved your green jello recipe.  My family makes sure we never have leftovers when I fix this one. Thanks for everything,</p>
+        <p>Daisy Daniels</p>
+        <p>Eureka, Utah</p>
+        <img src="Images/Thumbnails/GreenJello2Sm.jpg" width="250" height="166" alt="Green Jello">
+        <hr>
+        <h3>Always Find an Answer</h3>
+        <p>Whenever I am at a loss about what to cook for dinner, I just go to your web site and I can always find an answer. The ingredients of your recipes are always reasonably priced so I won't have to worry about busting my budget.  I was nervous about trying to make my own ice cream, but your Bear Lake Raspberry recipe made me brave enough to try it.  The step by step directions were easy to follow and my kids really loved the ice cream.  I am attaching a photo. I scream for your ice cream,</p>
+        <p>Bernice Cooks</p>
+        <p>Orem, Utah</p>
+        <img src="Images/Thumbnails/RasberryIceCreamSm.jpg" width="250" height="166" alt="Raspberry Ice Cream">
+        <hr> 
+        <h3>Real Man Cooking</h3>
+        <p>Real men are not afraid to try Dutch oven cooking.  I made an investment in equipment, but it sat in my garage until I found your wonderful recipes online.  Now, I am a hit at family reunions and campouts.  I have tried main dishes, deserts, and even baked rolls.  My next attempt will be lasagna.  Thanks for giving me the courage to try cooking the old fashioned way. Warmly yours,</p>
+        <p>Daniel Johnson</p>
+        <p>St. George, Utah</p>
+        <img src="Images/Thumbnails/DutchOvenSm.jpg" width="250" height="166" alt="Dutch Oven">
+        <a href="AboutUs.html">About Us</a>
+	    <a href="" onMouseOver="document.getElementById('print').src='Images/Print2.png';" onMouseOut="document.getElementById('print').src='Images/Print.png';" onclick="window.print()">
+
+			<footer>
+				<img src="Images/Print.png" width="70" height="80" name="PrintButton" alt="PrintButton" style="border:none;" id="print"/>
+		
+			</footer>
+	
+		</a>
+
+    </body>
+</html>

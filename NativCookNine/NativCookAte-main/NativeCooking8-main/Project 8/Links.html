@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Native Cooking - Home</title>
+<link rel="stylesheet" href="mysstyles.css">
+<link rel="stylesheet" href="print.css" media="print">
+<script language="JavaScript" type="text/javascript">
+
+	PrintButton1 = new Image
+	PrintButton2 = new Image
+	logo1 = new Image
+	logo2 = new Image
+if (document.images) {
+	PrintButton1.src = "images/print5.gif"
+	PrintButton2.src = "images/print6.gif"
+	logo1.src = "images/logo1.jpg"
+	logo2.src = "images/logo2.jpg"
+}
+
+
+		var imgArray = new Array(
+			'Chef2Lg.jpg',
+			'DutchOvenLg.jpg',
+			'RasberryCakeLg.jpg',
+			'JelloCakeLg.jpg'
+			
+
+		);
+
+
+		var titleArray = new Array(
+			'Chef',
+			'Dutch Oven',
+			'Raspberry Cake',
+			'Jello Cake'
+			
+		);
+			
+		var imgPath = "Images/Fullsize/";
+		
+		function swapImage(imgID) {
+
+			var theImage = document.getElementById('theImage');
+			var textDiv = document.getElementById('bottomText');
+
+			var newImg;
+			var textTitle;
+
+			newImg = imgArray[imgID];
+			theImage.src = imgPath + newImg;
+
+			textTitle=titleArray[imgID];
+
+      			textDiv.innerHTML = textTitle;
+		}
+			
+		function preloadImages() {		
+			for(var i = 0; i < imgArray.length; i++) {
+				var tmpImg = new Image;
+				tmpImg.src = imgPath + imgArray[i];
+			}
+		}
+		
+
+</script>
+</head>
+<body onload="preloadImages()">
+<div id="container">
+    <header>
+        <img src="Images/Baner.png" width="900px">
+        <nav>
+            <ul>
+                <li><a href="Home.html">| Home |</a><a href="Tributes.html">| Tributes |</a><a href="AboutUs.html">| About Us |</a><a href="Survery.html">| Survey |</a><a href="Links.html">| Favorites |</a></li>
+            </ul>
+        </nav>
+    </header>
+<h1>Our Favorite Things:</h1>
+    <section>
+        <h3>Ingredients</h3>
+		<ul>
+			<li><a href="https://walmart.com">Walmart</a></li>
+			<li><a href="https://costco.com">Costco</a></li>
+		</ul>
+		<h3>Equipment</h3>
+		<ul>
+			<li><a href="https://kitchenaid.com">Kitchen Aid</a></li>
+			<li><a href="https://bosch-home.com">Bosch</a></li>
+			<li><a href="https://hexclad.com">Hexclad</a></li>
+		</ul>
+    </section>
+    <a href="" onMouseOver="document.getElementById('print').src='Images/Print2.png';" onMouseOut="document.getElementById('print').src='Images/Print.png';" onclick="window.print()">
+
+        <footer>
+            <img src="Images/Print.png" width="70" height="80" name="PrintButton" alt="PrintButton" style="border:none;" id="print"/>
+    
+        </footer>
+
+	</a>
+</div>
+</body>
+</html>
